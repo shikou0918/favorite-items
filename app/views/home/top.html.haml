@@ -1,0 +1,8 @@
+%section.mainvisual
+  %h2
+    Favorite Items
+    %p
+      自分のお気に入りのアイテムを紹介しよう！
+  -# - unless user_signed_in? then
+  -#   .mainvisual__login
+  -#     = link_to("ログイン", new_user_session_path)
