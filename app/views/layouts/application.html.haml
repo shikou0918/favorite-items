@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title FavoriteItems
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header
+      .header-left
+        %li= link_to("FavoriteItems", "/", class: "title")
+      .header-right
+        %li= link_to("投稿一覧", "/")
+        %li= link_to("投稿する", "/")
+        %li= link_to("ログイン", "/")
+    .wrapper
+      .container
+        = yield
+        %footer.footer
+          %p.footer-item ©2020 BestProtein
+
