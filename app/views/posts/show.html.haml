@@ -1,0 +1,24 @@
+.post__show__header
+.post__show__body
+  = image_tag(@post.image.url, class: "post__show__body__img", size: '350x250')
+.post__show--text
+  = @post.name
+.comments
+  - if user_signed_in?
+    = form_for [@post, @comment] do |f|
+      = f.text_area :text, cols: "30", placeholder: "コメント入力欄", rows: 2, class: "comments__area"
+      = f.submit "コメントする", class: "comments__input" 
+  - if @comments
+    .comments__list
+      .comments__list__header
+        %h2 コメント一覧
+      .comments__list__show
+        - @comments.each do |c|
+          .block
+            .block__text
+              = c.text
+              .block__details
+                = link_to user_path(c.user), class: "block__user-name"  do
+                  = c.user.nickname
+                .block____details__date
+                  = c.created_at.strftime('%Y/%m/%d')
