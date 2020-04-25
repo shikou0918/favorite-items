@@ -1,0 +1,15 @@
+@mixin area-style {
+  box-shadow: 0 2px 6px #c1ced7;
+  background-color: white;
+}
+
+@mixin product-box {
+  height: 330px;
+  width: 300px;
+  margin: 40px 10px 0 12px;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px #c1ced7;
+  background-color: rgba(0, 128, 128, 0.2);
+}
