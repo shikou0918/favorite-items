@@ -9,12 +9,17 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    binding.pry
     if @post.save
-      redirect_to post_path, notice: "投稿しました"
+      redirect_to posts_path, notice: "投稿しました"
     else
       redirect_to new_post_path, alert: "投稿に失敗しました"
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
+    @comments = @post.comments.includes(:user)
+    @comment = Comment.new
   end
 
   private

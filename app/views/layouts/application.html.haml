@@ -12,7 +12,7 @@
         %li= link_to("FavoriteItems", "/", class: "title")
       - if user_signed_in?
         .header-right
-          %li= link_to("投稿一覧", "/")
+          %li= link_to("投稿一覧", "/posts")
           %li= link_to("投稿する", "/posts/new")
           %li= link_to("ログアウト", destroy_user_session_path, method: :delete)
       - else
