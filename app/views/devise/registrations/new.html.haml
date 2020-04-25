@@ -12,7 +12,7 @@
         = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード（確認）"
       .field
         = f.text_field :nickname, placeholder: "ニックネーム"
-      -# .field
-      -#   = f.file_field :avatar
+      .field
+        = f.file_field :avatar
       .actions
         = f.submit "登録"

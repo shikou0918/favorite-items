@@ -1,0 +1,52 @@
+.user__area {
+  @include area-style;
+  height: 170px;
+  width: 800px;
+  margin: 80px auto 0;
+  border-radius: 10px;
+
+&__avatar {
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+&__profile h3 {
+  text-align: center;
+  margin: -100px 350px 0 0;
+  font-weight: bold;
+}
+}
+
+.post__like {
+display: flex;
+// height: 170px;
+width: 300px;
+margin: 80px auto 0;
+
+h3 {
+  @include area-style;
+  font-size: 14px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  width: 80px;
+  margin: 10px 5px 0 0;
+  padding: 0 30px;
+  float: left;
+  border-radius: 10px;
+  color: black;
+  &:hover {
+    background-color: rgba(0, 128, 128, 0.7);
+    color: white;
+  }
+}
+}
+
+
+.user__list {
+width: 70%;
+margin: 0 auto 80px;
+padding: 50px 0;
+}

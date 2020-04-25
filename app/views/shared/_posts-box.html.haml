@@ -1,0 +1,13 @@
+.posts__list
+  - @posts.each do |post|
+    .posts__list__box
+      = link_to post_path(post.id) do
+        = image_tag(post.image.url, size: '250x200', class: "img")
+      .posts__list__box__name
+        = post.name
+      .posts__list__box__content
+        = post.content
+      .posts__list__box__user
+        = post.user.nickname
+      .posts__list__box__like
+        %i.fa.fa-heart

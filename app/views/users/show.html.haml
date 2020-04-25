@@ -1,0 +1,18 @@
+.user__area
+  - if current_user.avatar?
+    = image_tag current_user.avatar, class:"user__area__avatar"
+  - elsif current_user.nickname == "ゲストユーザー"
+    = image_tag ("guestuser.jpg"), class:"user__area__avatar"
+  - else
+    = image_tag ("noimage.jpg"), class:"user__area__avatar"
+  .user__area__profile
+    %h3
+      = current_user.nickname 
+.post__like
+  %h3
+    投稿一覧
+  %h3
+    いいね一覧
+.user__list
+  = render "shared/posts-box"
+.user__list__like

@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20200425051858) do
     t.integer  "user_id",                  null: false
     t.string   "name",                     null: false
     t.text     "content",    limit: 65535, null: false
-    t.text     "image",      limit: 65535, null: false
+    t.string   "image",                    null: false
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20200425051858) do
     t.string   "nickname",                            null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "avatar"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

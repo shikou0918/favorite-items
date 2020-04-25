@@ -8,18 +8,18 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[nickname avatar])
   end
 
-  # # 新規登録後に投稿一覧に遷移
-  # def after_sign_up_path_for(_resource)
-  #   posts_path
-  # end
+  # 新規登録後に投稿一覧に遷移
+  def after_sign_up_path_for(_resource)
+    posts_path
+  end
 
-  # # ログイン後に投稿一覧に遷移
-  # def after_sign_in_path_for(_resource)
-  #   posts_path
-  # end
+  # ログイン後に投稿一覧に遷移
+  def after_sign_in_path_for(_resource)
+    posts_path
+  end
 
-  # # ログアウト後にトップページに遷移
-  # def after_sign_out_path_for(_resource)
-  #   root_path
-  # end
+  # ログアウト後にトップページに遷移
+  def after_sign_out_path_for(_resource)
+    root_path
+  end
 end
