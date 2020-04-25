@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # has_one_attached :avatar
   validates :nickname, length: { maximum: 20 }, on: :create
-  # has_many :posts
+  has_many :posts
 end
