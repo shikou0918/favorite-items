@@ -1,0 +1,10 @@
+- @posts.each do |post|
+  %h3 
+    名前
+  = post.name
+  %h3
+    紹介文
+  = post.content
+  %h3
+    画像
+  = image_tag post.image.url
