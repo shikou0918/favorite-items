@@ -1,0 +1,36 @@
+.search-bar{
+  margin-right: 50px;
+   &__container {
+    position: relative;
+    line-height: 50px;
+    width: 250px;
+    font-size: 14px;
+  }
+
+  .search { 
+    height: 25px;
+    padding-left: 50px;
+    outline: none;
+    border-radius: 35px;
+  }
+
+  ::placeholder {
+    line-height: 35px;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+
+  .search-btn{
+    position: absolute;
+    top: 12px;
+    left: 0;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .fa-search {
+    font-size: 14px;
+  }
+} 
