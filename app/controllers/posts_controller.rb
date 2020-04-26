@@ -24,6 +24,12 @@ class PostsController < ApplicationController
     @comment = Comment.new
   end
 
+  def search
+    @posts = Post.search(params[:search])
+    @posts_length = @posts.length
+  end
+
+
   private
 
   def post_params

@@ -1,0 +1,5 @@
+.search-bar
+  = form_tag(search_posts_path, method: :get, class: "search-bar__container") do
+    %input.search{name: :search, placeholder: "ワード検索",}
+    = button_tag type: 'submit', class: "search-btn" do
+      = icon('fas', 'search')
