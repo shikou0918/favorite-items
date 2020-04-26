@@ -1,99 +1,44 @@
-.post__show__header {
-  @include area-style;
-  height: 130px;
-  width: 800px;
-  margin: 80px auto 0;
-  border-radius: 10px 10px 0 0;
-}
+.posts__list {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
 
-.post__show__body {
-  @include area-style;
-  height: 350px;
-  width: 800px;
-  margin: 0 auto;
+  &__box {
+    @include product-box;
 
-  &__img {
-    display: block;
-    padding: 50px 0 50px;
-    margin: 0 auto;
-  }
-}
-
-.post__show--text {
-  @include area-style;
-  height: 300px;
-  width: 800px;
-  margin: 0 auto;
-}
-
-.comments {
-  @include area-style;
-  width: 800px;
-  margin: 0 auto 120px;
-  padding-top: 30px;
-  border-radius: 0 0 10px 10px;
-
-  &__area {
-    display: block;
-    width: 580px;
-    height: 70px;
-    margin: 0 auto;
-    border: 1px solid #c1ced7;
-    border-radius: 10px;
-  }
-
-  &__input {
-    display: block;
-    border: none;
-    height: 40px;
-    width: 580px;
-    margin: 40px auto;
-    background-color: rgba(0, 0, 255, 0.7);
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-top: 40px;
-  }
-
-  &__list {
-    &__header {
-      padding: 20px;
-    } h2 {
-      font-size: 20px;
-    }
-
-    &__show {
-      margin: 0px auto;
-      padding: 20px;
-    } 
-
-    .block {
-      border-bottom: 1px solid #c1ced7;
-      color: #777;
-      height: 50px;
-      width: 100%;
-      margin: 0 auto;
-      // float: left;
-
-      &__text {
-        color: #777;
-      }
-
-      &__details {
-        float: right;
-        text-align: right;
-      }
-      
-      &__user-name {
-        text-decoration: none;
-        cursor: pointer;
-        color: #777;
-      }
-
-      &__date {
-        text-align: right;
+    &__name {
+      padding: 0 25px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font: {
+      size: 18px;
+      weight: bold;
       }
     }
 
+    &__content {
+      line-height: 1;
+      height: 40px;
+      margin-top: 10px;
+      padding: 0 25px;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__user {
+      margin-top: 10px;
+      padding: 0 25px;
+      font-size: 14px;
+      float: left;
+    }
+
+    &__like {
+      display: inline-block;
+      margin-top: 10px;
+      float: right;
+      padding: 0 25px;
+    }
   }
 }
