@@ -1,3 +1,7 @@
+* {
+  text-decoration: none;
+}
+
 .posts__list {
   padding: 0 20px;
   display: flex;
@@ -41,4 +45,12 @@
       padding: 0 25px;
     }
   }
+}
+
+.fa-heart {
+  color: red;
+}
+
+.red-text {
+  color: red;
 }
