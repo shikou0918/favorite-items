@@ -1,0 +1,69 @@
+.comments {
+  @include area-style;
+  width: 800px;
+  margin: 0 auto 120px;
+  padding-top: 30px;
+  border-radius: 0 0 10px 10px;
+
+  &__area {
+    display: block;
+    width: 580px;
+    height: 70px;
+    margin: 0 auto;
+    border: 1px solid #c1ced7;
+    border-radius: 10px;
+  }
+
+  &__input {
+    display: block;
+    border: none;
+    height: 40px;
+    width: 580px;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 255, 0.7);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+
+  &__list {
+    &__header {
+      padding: 20px;
+    } h2 {
+      font-size: 20px;
+    }
+
+    &__show {
+      margin: 0px auto;
+      padding: 20px;
+    } 
+
+    .block {
+      border-bottom: 1px solid #c1ced7;
+      color: #777;
+      height: 50px;
+      width: 100%;
+      margin: 0 auto;
+
+      &__text {
+        color: #777;
+      }
+
+      &__details {
+        float: right;
+        text-align: right;
+      }
+      
+      &__user-name {
+        text-decoration: none;
+        cursor: pointer;
+        color: #777;
+      }
+
+      &__date {
+        text-align: right;
+      }
+    }
+  }
+}
