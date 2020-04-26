@@ -15,8 +15,9 @@
         = @post.user.nickname
     .post__show__header__date
       = @post.created_at.strftime('%Y/%m/%d') + "に投稿"
-    -# .posts__list__box__like
-    -#   %i.fa.fa-heart
+    .post__show__header__like
+      %div{id: "likes_buttons_#{@post.id}"}
+        = render partial: 'likes/like', locals: { post: @post, likes: @likes}
   .post__show__body
     = image_tag(@post.image.url, class: "post__show__body__img", size: '350x250')
   .post__show__text

@@ -10,4 +10,5 @@
       .posts__list__box__user
         = post.user.nickname
       .posts__list__box__like
-        %i.fa.fa-heart
+        %div{id: "likes_buttons_#{post.id}"}
+          = render partial: 'likes/like', locals: { post: post, likes: @likes}
