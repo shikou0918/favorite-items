@@ -12,12 +12,14 @@
         %li= link_to("Favorite Items", "/", class: "title")
       - if user_signed_in?
         .header-right
+          = render "shared/search-bar"
           %li= link_to("投稿一覧", "/posts")
           %li= link_to("投稿する", "/posts/new")
           %li= link_to(current_user.nickname, user_path(current_user))
           %li= link_to("ログアウト", destroy_user_session_path, method: :delete)
       - else
         .header-right
+          = render "shared/search-bar"
           %li= link_to("投稿一覧", "/posts")
           %li= link_to("新規登録", new_user_registration_path)
           %li= link_to("ログイン", new_user_session_path)
