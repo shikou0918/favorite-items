@@ -1,0 +1,14 @@
+.side-bar
+  .side-bar__title
+    %h2いいね数ランキング
+  .side-bar__box
+    - @all_ranks.each_with_index do |post, i|
+      %p
+        = link_to post_path(post.id) do
+          = i + 1
+          位
+          いいね数
+          = post.likes_count
+          %p= post.name
+          = link_to post_path(post.id) do
+            = image_tag(post.image.url, size: '110x110', class: "rank-img")
