@@ -1,0 +1,28 @@
+.side-bar {
+  width: 20%;
+  padding: 50px 10px 29px 0;
+  margin-right: 20px;
+  float: right;
+  box-shadow: 0 2px 6px #c1ced7;
+  background-color: white;
+  border-radius: 10px;
+
+  &__title {
+    text-align: center;
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  &__box {
+    text-align: center;
+    a {
+      color: black;
+    }
+  }
+}
+
+.rank-img {
+  margin: 10px 0;
+}
