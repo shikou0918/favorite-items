@@ -2,17 +2,22 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
   
   def create
-    post = Post.find(params[:post_id])
-    @comment = post.comments.build(comment_params)
+    @comment = Comment.create(comment_params)
     @comment.user_id = current_user.id
-    if @comment.save
-      redirect_to post_path(post.id), notice: "コメントしました"
-    else
-      redirect_to post_path(post.id), alert: "コメントに失敗しました"
+    respond_to do |format|
+      format.html { redirect_to post_path(params[:post_id]) }
+      format.json
+    end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    if @comment.destroy
+      render :destroy
     end
   end
 
   def comment_params
-    params.require(:comment).permit(:text)
+    params.require(:comment).permit(:text).merge(user_id: current_user.id, post_id: params[:post_id])
   end
 end
