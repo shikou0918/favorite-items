@@ -1,13 +1,13 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "mixin/mixin";
+@import "posts/comments";
 @import "posts/index";
 @import "posts/show";
 @import "posts/side-bar";
 @import "shared/posts-box";
 @import "shared/search";
 @import "users/show";
-@import "comments";
 @import "form";
 @import "reset";
 @import "top";
