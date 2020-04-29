@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   mount_uploader :avatar, ImageUploader
-  validates :nickname, length: { maximum: 20 }, on: :create
+  validates :nickname, presence: true, length: { maximum: 10 }
   has_many :posts
 end
