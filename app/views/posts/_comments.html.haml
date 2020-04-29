@@ -1,0 +1,20 @@
+= form_for [@post, @comment] do |f|
+  .comments
+    - if user_signed_in?
+      = f.text_area :text, cols: "30", placeholder: "コメント入力欄", rows: 2, class: "comments__area"
+      = f.submit "コメントする", class: "comments__input" 
+    - if @comments
+      .comments__list
+        .comments__list__header
+          %h2 コメント一覧
+        .comments__list__show
+          - @comments.each do |c|
+            %div{id: "block-number#{c.id}", class: "block"}
+              .block__text
+                = c.text
+                = link_to user_path(c.user) do
+                  = c.user.nickname
+              .block__date-delete
+                = c.created_at.strftime('%Y/%m/%d')
+                - if c.user_id == current_user.id
+                  = link_to icon('fas', 'trash-alt'), post_comment_path(@post, c), method: :delete, remote: true, data: { confirm: '削除してよろしいですか？' }
