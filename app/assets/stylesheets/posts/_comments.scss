@@ -35,34 +35,35 @@
     }
 
     &__show {
+      height: 250px;
       margin: 0px auto;
       padding: 20px;
+      overflow: scroll;
     } 
 
     .block {
-      border-bottom: 1px solid #c1ced7;
       color: #777;
       height: 50px;
       width: 100%;
       margin: 0 auto;
+      display: grid;
+
 
       &__text {
+        display: inline-block;
         color: #777;
+        a {
+          float: right;
+          color: #777;
+        }
       }
 
-      &__details {
-        float: right;
+      &__date-delete {
         text-align: right;
-      }
-      
-      &__user-name {
-        text-decoration: none;
-        cursor: pointer;
-        color: #777;
-      }
-
-      &__date {
-        text-align: right;
+        border-bottom: 1px solid #c1ced7;
+        .fas {
+          color: #777;
+        }
       }
     }
   }
