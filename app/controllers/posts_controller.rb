@@ -30,7 +30,6 @@ class PostsController < ApplicationController
     @posts_length = @posts.length
   end
 
-
   private
 
   def post_params

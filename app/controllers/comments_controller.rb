@@ -12,9 +12,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    if @comment.destroy
-      render :destroy
-    end
+    render :destroy if @comment.destroy
   end
 
   def comment_params
