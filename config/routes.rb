@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   resources :posts do
      collection do
       get 'search'
-    end
+     end
     resources :comments
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: %i[create destroy]
   end
   devise_for :users
   devise_scope :user do
