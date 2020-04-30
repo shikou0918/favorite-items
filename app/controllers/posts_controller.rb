@@ -28,8 +28,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @user = User.find_by(id: @post.user_id)
+    @posts = @user.posts.page(params[:page]).order('created_at DESC')
     @comments = @post.comments.includes(:user)
-    @comment = Comment.new
+    @comment = Comment.new 
   end
 
   def edit
@@ -44,6 +46,7 @@ class PostsController < ApplicationController
   def search
     @posts = Post.search(params[:search])
     @posts_length = @posts.length
+    @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(5).pluck(:post_id))
   end
 
   private
