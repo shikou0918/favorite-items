@@ -7,7 +7,7 @@ body {
 header {
   height: 50px;
   width: 100%;
-  background-color: rgba(0, 128, 128, 0.7);
+  background-color: rgba(0, 128, 128, 1);
   position: fixed;
   top: 0;
   z-index: 10;
@@ -54,10 +54,11 @@ header {
   }
 }
 
+// フッター
 footer {
   height: 50px;
   width: 100%;
-  background-color: rgba(0, 128, 128, 0.7);
+  background-color: rgba(0, 128, 128, 1);
   position: absolute;
   bottom: 0;
   z-index: 10;
@@ -75,6 +76,7 @@ footer {
   padding-bottom: 10px;
 }
 
+// トップ画像
 .mainvisual {
   width: 100vw;
   height: 100vh;
