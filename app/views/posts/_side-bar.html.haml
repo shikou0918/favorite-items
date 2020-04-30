@@ -10,5 +10,4 @@
           いいね数
           = post.likes_count
           %p= post.name
-          = link_to post_path(post.id) do
-            = image_tag(post.image.url, size: '200x200', class: "rank-img")
+          = image_tag(post.image.url, size: '200x200', class: "side-img")
