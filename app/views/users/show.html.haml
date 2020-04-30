@@ -1,6 +1,6 @@
 .user__area
   - if @user.avatar?
-    = image_tag current_user.avatar, class:"user__area__avatar"
+    = image_tag @user.avatar, class:"user__area__avatar"
   - elsif @user.nickname == "ゲストユーザー"
     = image_tag ("guestuser.jpg"), class:"user__area__avatar"
   - else
@@ -8,11 +8,26 @@
   .user__area__profile
     %h3
       = @user.nickname 
-.post__like
-  %h3
+%ul.tab-btn-box.js-btn-box
+  %li.tab.js-tab.is-active 
     投稿一覧
-  %h3
+  %li.tab.js-tab 
     いいね一覧
-.user__list
-  = render "shared/posts-box"
-.user__list__like
+.tab-contents-box
+  .tab-contents.js-tab-contents.is-show
+    = render partial: "shared/posts-box", locals: { posts: @posts}
+  .tab-contents.js-tab-contents
+    = render partial: "shared/posts-box", locals: { posts: @liked_posts}
+
+:javascript
+  $(function(){
+    $('.js-tab').click(function(){
+      $('.tab').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.is-show').removeClass('is-show');
+        
+      const index = $(this).index();
+      $('.tab-contents').eq(index).addClass('is-show');
+    });
+  });
+
