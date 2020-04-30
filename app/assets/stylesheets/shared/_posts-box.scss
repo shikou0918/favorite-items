@@ -47,10 +47,32 @@
   }
 }
 
+
+// 編集と削除のアイコン
+.posts__update {
+  text-align: right;
+  a {
+    color: #777;
+    font-size: 14px;
+  }
+}
+
+.posts__delete {
+  text-align: right;
+  a {
+    color: #777;
+  }
+}
+
+// いいねアイコン
 .fa-heart {
   color: red;
 }
 
 .red-text {
   color: red;
+}
+
+.vertical_like {
+  text-align: right;
 }

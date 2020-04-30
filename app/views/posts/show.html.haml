@@ -1,24 +1,25 @@
-.post__show__header
-  .post__show__header__name
-    = @post.name
-  .post__show__header__avatar
+.post__show  
+  .post__show__header
+    .post__show__header__name
+      = @post.name
+  .post__show__body
+    = image_tag(@post.image.url, class: "post__show__body__img", size: '350x250')
+    .post__show__body__avatar
     = link_to user_path(@post.user) do
       -if @post.user.avatar.url
-        = image_tag @post.user.avatar.url, class: "post__show__header__avatar__img"
+        = image_tag @post.user.avatar.url, class: "post__show__body__avatar__img"
       - elsif @post.user.nickname == "ゲストユーザー"
-        = image_tag ("guestuser.jpg"), class: "post__show__header__avatar__img"
+        = image_tag ("guestuser.jpg"), class: "post__show__body__avatar__img"
       - else
-        = image_tag ("noimage.jpg"), class: "post__show__header__avatar__img"
-  .post__show__header__nickname
-    = link_to user_path(@post.user) do
-      = @post.user.nickname
-  .post__show__header__date
-    = @post.created_at.strftime('%Y/%m/%d') + "に投稿"
-  .post__show__header__like
-    %div{id: "likes_buttons_#{@post.id}"}
-      = render partial: 'likes/like', locals: { post: @post, likes: @likes}
-.post__show__body
-  = image_tag(@post.image.url, class: "post__show__body__img", size: '350x250')
-.post__show__text
-  = @post.content
-= render 'comments', post: @post
+        = image_tag ("noimage.jpg"), class: "post__show__body__avatar__img"
+    .post__show__body__nickname
+      = link_to user_path(@post.user) do
+        = @post.user.nickname
+    .post__show__body__date
+      = @post.created_at.strftime('%Y/%m/%d') + "に投稿"
+    .post__show__body__like
+      %div{id: "likes_buttons_#{@post.id}"}
+        = render partial: 'likes/like', locals: { post: @post, likes: @likes}
+    .post__show__text
+      = @post.content
+  = render 'comments', post: @post

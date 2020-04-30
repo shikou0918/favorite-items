@@ -1,9 +1,8 @@
 .comments {
-  @include area-style;
   width: 800px;
   margin: 0 auto 120px;
   padding-top: 30px;
-  border-radius: 0 0 10px 10px;
+  background-color: white;
 
   &__area {
     display: block;
@@ -30,6 +29,7 @@
   &__list {
     &__header {
       padding: 20px;
+      border-top: 1px solid #c1ced7;
     } h2 {
       font-size: 20px;
     }

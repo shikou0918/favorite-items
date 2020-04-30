@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
-  
+
   def index
     @posts = Post.includes(:user).order('created_at DESC')
     @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(5).pluck(:post_id))
@@ -19,10 +19,26 @@ class PostsController < ApplicationController
     end
   end
 
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    redirect_to posts_path, notice: "編集しました"
+ 
+  end
+
   def show
     @post = Post.find(params[:id])
     @comments = @post.comments.includes(:user)
     @comment = Comment.new
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    render :destroy if @post.destroy
   end
 
   def search
