@@ -5,18 +5,18 @@
   margin: 80px auto 0;
   border-radius: 10px;
 
-&__avatar {
-    padding: 10px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
+  &__avatar {
+      padding: 10px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+  }
 
-&__profile h3 {
-  text-align: center;
-  margin: -100px 350px 0 0;
-  font-weight: bold;
-}
+  &__profile h3 {
+    text-align: center;
+    margin: -100px 350px 0 0;
+    font-weight: bold;
+  }
 }
 
 .post__like {
@@ -44,8 +44,46 @@ h3 {
 }
 
 
-.user__list {
-width: 70%;
-margin: 0 auto 80px;
-padding: 50px 0;
+// .list__area {
+// width: 70%;
+// margin: 0 auto 80px;
+// padding: 50px 0;
+// }
+
+.tab-btn-box {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto 0;
+}
+ 
+/* タブのボタン */
+.tab {
+  width: 150px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 6px #c1ced7;
+  border-radius: 10px;
+  cursor: pointer;
+}
+ 
+.tab.is-active {
+  background-color: rgba(0, 128, 128, 0.7);
+  color: #fff;
+}
+
+.tab-contents-box {
+  margin: 0 auto 100px;
+  width: 70%;
+}
+ 
+/* タブの中身 */
+.tab-contents {
+  display: none;
+}
+ 
+/* ボタンを押した後コンテンツを表示 */
+.tab-contents.is-show {
+  display: block;
 }
