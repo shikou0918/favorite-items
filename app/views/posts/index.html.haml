@@ -1,4 +1,4 @@
 = render "side-bar"
 .posts
   %h2投稿一覧
-  = render "shared/posts-box"
+  = render partial: "shared/posts-box", locals: { posts: @posts}
