@@ -1,0 +1,15 @@
+.contents.row
+  %h2 投稿編集
+.form
+  = form_for @post do |f|
+    .field
+      = f.text_field :name, placeholder: "紹介するアイテム"
+    .field
+      = f.text_field :content, cols: :"30", placeholder: "紹介文"
+    .field
+      %label.input-box__image
+        = f.file_field :image, placeholder: "画像をアップロード"
+    .field
+      = f.submit "更新する"
+    .return
+      = link_to "戻る", posts_path(@post.id)
