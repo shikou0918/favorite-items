@@ -1,0 +1,8 @@
+.side-bar
+  .side-bar__title
+    = @post.user.nickname + "さんのその他の投稿"
+  .side-bar__box2
+    - @posts.each do |post|
+      = link_to post_path(post.id) do
+        %p= post.name
+        = image_tag(post.image.url, size: '200x200', class: "side-img")
