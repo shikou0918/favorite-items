@@ -2,3 +2,4 @@
 .posts
   %h2投稿一覧
   = render partial: "shared/posts-box", locals: { posts: @posts}
+  = paginate(@posts)

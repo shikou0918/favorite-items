@@ -15,9 +15,10 @@
     いいね一覧
 .tab-contents-box
   .tab-contents.js-tab-contents.is-show
-    = render partial: "shared/posts-box", locals: { posts: @posts}
+    = render partial: "shared/posts-box2", locals: { posts: @posts}
   .tab-contents.js-tab-contents
-    = render partial: "shared/posts-box", locals: { posts: @liked_posts}
+    = render partial: "shared/posts-box2", locals: { posts: @liked_posts}
+  = paginate(@posts)
 
 :javascript
   $(function(){
