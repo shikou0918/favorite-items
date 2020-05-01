@@ -13,6 +13,8 @@
       .field
         = f.text_field :nickname, placeholder: "ニックネーム"
       .field
+        = f.text_field :profile, placeholder: "自己紹介文（任意）"
+      .field
         = f.file_field :avatar
       .actions
         = f.submit "登録"
