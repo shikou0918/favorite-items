@@ -1,0 +1,19 @@
+.container
+  .contents.row
+    %h2 プロフィール編集
+  .form
+    = form_for(@user) do |f| 
+      .field
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
+      .field
+        = f.password_field :password, autocomplete: "new-password", placeholder: "パスワード（#{@minimum_password_length}文字以上）"
+      .field
+        = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード（確認）"
+      .field
+        = f.text_field :nickname, placeholder: "ニックネーム"
+      .field
+        = f.text_field :profile, placeholder: "自己紹介文（任意）"
+      .field
+        = f.file_field :avatar
+      .actions
+        = f.submit "登録"
