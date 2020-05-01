@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'likes/create'
-
-  get 'likes/destroy'
-
+  root "home#top"
+  
+  resources :likes, only: [:create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :posts do
      collection do
@@ -11,11 +10,11 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes, only: %i[create destroy]
   end
-  devise_for :users
+
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   devise_scope :user do
     post 'users/guest_sign_in' => 'users/sessions#new_guest'
   end
-  root "home#top"
   resources :users, only: %i[edit show] do
   end
 end

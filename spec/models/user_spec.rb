@@ -51,5 +51,11 @@ describe User do
       expect(user.errors[:password_confirmation]).to include("doesn't match Password")
     end
 
+    it "自己紹介文は101字以上だと登録できない" do
+      num = 'n' * 101
+      user = build(:user, profile: num)
+      user.valid?
+      expect(user.errors[:profile]).to include("is too long (maximum is 100 characters)")
+    end
   end
 end

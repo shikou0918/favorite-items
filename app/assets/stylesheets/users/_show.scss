@@ -1,21 +1,70 @@
 .user__area {
-  @include area-style;
-  height: 170px;
-  width: 800px;
-  margin: 80px auto 0;
-  border-radius: 10px;
+  display: flex;
+  width: 900px;
+  margin:  auto;
+  
+  &__left {
+    @include area-style;
+    height: 260px;
+    width: 400px;
+    margin-top: 80px;
+    padding: 20px;
+    background-color: white;
 
-  &__avatar {
-      padding: 10px;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+    &__avatar {
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    &__nickname {
+      text-align: center;
+      h3 {
+        font-size: 26px;
+        font-weight: bold;
+      }
+    }
   }
 
-  &__profile h3 {
-    text-align: center;
-    margin: -100px 350px 0 0;
-    font-weight: bold;
+  &__right {
+    @include area-style;
+    margin-top: 80px;
+    height: 260px;
+    padding: 20px;
+
+    &__profile {
+      line-height: 2;
+      width: 326px;
+      height: 200px;
+      word-break: break-all;
+      border-bottom: 1px solid #c1ced7;
+      padding:0 1em;
+      background: linear-gradient(#ccc 1px, transparent 1px) white;
+      background-size: auto 2.5em;
+      line-height: 2.5em;
+      border-bottom: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      overflow: hidden;
+      box-shadow: 0 2px 6px #c1ced7;
+    }
+    
+    &__edit {
+      &__btn {
+        display: block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background-color: rgba(0, 0, 255, 0.7);
+        margin: 20px auto;
+        text-align: center;
+        border-radius: 20px;
+        cursor: pointer;
+        color: white;
+      }
+    }
   }
 }
 
@@ -42,13 +91,6 @@ h3 {
   }
 }
 }
-
-
-// .list__area {
-// width: 70%;
-// margin: 0 auto 80px;
-// padding: 50px 0;
-// }
 
 .tab-btn-box {
   display: flex;

@@ -2,6 +2,7 @@
   text-decoration: none;
 }
 
+
 .posts__list {
   height: 1215px;
   padding: 0 20px;
@@ -61,7 +62,7 @@
 
 
 // 編集と削除のアイコン
-.posts__update {
+.posts__edit {
   text-align: right;
   a {
     color: #777;
