@@ -3,9 +3,11 @@
 }
 
 .posts__list {
+  height: 1215px;
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
+
 
   &__box {
     @include product-box;
@@ -48,6 +50,13 @@
       padding: 0 25px;
     }
   }
+}
+
+// ユーザー詳細ページ
+.posts__list2 {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
