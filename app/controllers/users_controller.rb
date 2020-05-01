@@ -5,8 +5,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts.page(params[:page]).order('created_at DESC')
-    @liked_posts = @user.liked_posts.page(params[:page]).order('created_at DESC')
+    @posts = @user.posts.page(params[:page]).order('created_at DESC').page(params[:page]).per(9)
+    @liked_posts = @user.liked_posts.page(params[:page]).order('created_at DESC').page(params[:page]).per(9)
   end
 
   # def set_user
