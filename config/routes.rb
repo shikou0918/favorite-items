@@ -10,11 +10,18 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes, only: %i[create destroy]
   end
+  
+  
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   devise_scope :user do
     post 'users/guest_sign_in' => 'users/sessions#new_guest'
   end
   resources :users, only: %i[edit show] do
+    member do
+      get :following, :followers
+    end
   end
+
+  resources :relationships, only: [:create, :destroy]
 end
