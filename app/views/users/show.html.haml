@@ -1,21 +1,4 @@
-.user__area
-  .user__area__left
-    - if @user.avatar?
-      = image_tag @user.avatar, class:"user__area__left__avatar"
-    - elsif @user.nickname == "ゲストユーザー"
-      = image_tag ("guestuser.jpg"), class:"user__area__left__avatar"
-    - else
-      = image_tag ("noimage.jpg"), class:"user__area__left__avatar"
-    .user__area__left__nickname
-      %h3
-        = @user.nickname 
-  .user__area__right
-    .user__area__right__profile
-      = @user.profile
-    .user__area__right__edit 
-      - if user_signed_in? && current_user.id == @user.id 
-        - unless @user.nickname == "ゲストユーザー" 
-          = link_to "編集する", edit_user_registration_path(@user.id), class: "user__area__right__edit__btn"
+= render "shared/profile", user: @user
 %ul.tab-btn-box.js-btn-box
   %li.tab.js-tab.is-active 
     投稿一覧
