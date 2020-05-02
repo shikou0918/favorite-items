@@ -1,0 +1,4 @@
+.follow
+  %h2 
+    = @user.nickname+"さんのフォローリスト"
+= render partial: "shared/profile", collection: @users, as: "user"
