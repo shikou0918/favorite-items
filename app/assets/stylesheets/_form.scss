@@ -129,3 +129,13 @@ p {
 	white-space:nowrap;
 	overflow:hidden;
 }
+
+// フォローボタン 
+
+.follows {
+  height: 40px;
+  background-color: rgba(0, 0, 255, 0.7);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
