@@ -1,16 +1,19 @@
 .container
   .contents.row
-    %h2 新規登録
+    %h2 プロフィール編集
   .form
     = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
       = render "devise/shared/error_messages", resource: resource
-      .field
-        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
-      .field
-        = f.text_field :nickname, placeholder: "ニックネーム"
-      .field
-        = f.text_field :profile, placeholder: "自己紹介文（任意）"
-      .field
+      .form__field
+        %h2 メールアドレス
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+      .form__field
+        %h2 ニックネーム
+        = f.text_field :nickname
+      .form__field
+        %h2 自己紹介文（任意）
+        = f.text_field :profile
+      .form__field
         = f.file_field :avatar
       .actions
-        = f.submit "登録"
+        = f.submit "更新する", class: "form__actions__btn"

@@ -2,12 +2,13 @@
   %h2 ログイン
 .form
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    .field
-      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
-    .field
-      = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード"
-    .actions
-      = f.submit "ログイン"
-      = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn btn-default"
-    .registration
-      = link_to("新規登録", new_user_registration_path)
+    .form__field
+      %h2 メールアドレス
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    .form__field
+      %h2 パスワード
+      = f.password_field :password, autocomplete: "current-password"
+    .form__actions
+      = f.submit "ログイン", class: "form__actions__btn"
+      = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "form__actions__btn"
+      = link_to "新規登録", new_user_registration_path, class: "form__actions__btn"

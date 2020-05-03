@@ -2,12 +2,15 @@
   %h2 投稿フォーム
 .form
   = form_for @post do |f|
-    .field
-      = f.text_field :name, placeholder: "紹介するアイテム"
-    .field
-      = f.text_field :content, cols: :"30", placeholder: "紹介文"
-    .field
+    .form__field
+      %h2 紹介するアイテム
+      = f.text_field :name
+    .form__field
+      %h2 紹介文
+      = f.text_area :content
+    .form__field
+      %h2 画像をアップロード
       %label.input-box__image
-        = f.file_field :image, placeholder: "画像をアップロード"
-    .field
-      = f.submit "投稿する"
+        = f.file_field :image
+    .form__actions
+      = f.submit "投稿する", class: "form__actions__btn"
