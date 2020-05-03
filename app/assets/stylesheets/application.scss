@@ -1,10 +1,12 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "toastr";
 @import "mixin/mixin";
 @import "posts/comments";
 @import "posts/index";
 @import "posts/show";
 @import "posts/side-bar";
+@import "shared/notifications";
 @import "shared/paginate";
 @import "shared/posts-box";
 @import "shared/search";
@@ -13,10 +15,22 @@
 @import "reset";
 @import "top";
 
+
+
 img {
   border-radius: 10px;
 }
 
-html {
-  background-color: #efefef;
-}
+// html {
+//   background-color: rgba(0, 128, 128, 0.1)
+// }
+
+
+
+// $white: #fff;
+// $side_blue_dark: #253141;
+// $side_blue_light: #2f3e51;
+// $light_blue: #38AEF0;
+// $light_gray: #999;
+// $black: #434a54;
+// $alert_orange: #F35500;

@@ -13,17 +13,21 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      redirect_to posts_path, notice: "投稿しました"
+      redirect_to posts_path, notice: "投稿しました。"
     else
-      redirect_to new_post_path, alert: "投稿に失敗しました"
+      flash.now[:alert] = "投稿に失敗しました。"
+      render :new
     end
   end
 
   def update
     @post = Post.find(params[:id])
-    @post.update(post_params)
-    redirect_to posts_path, notice: "編集しました"
- 
+    if @post.update(post_params)
+      redirect_to posts_path, notice: "編集しました。"
+    else 
+      flash.now[:alert] = "編集に失敗しました。"
+      render :edit
+    end
   end
 
   def show
