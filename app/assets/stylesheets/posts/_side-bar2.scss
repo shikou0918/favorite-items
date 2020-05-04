@@ -1,5 +1,5 @@
-.side-bar {
-  margin: 100px 20px 100px 0;
+.side-bar2 {
+  margin: 100px 20px 100px 136px;
 
   &__title {
     text-align: center;
@@ -8,11 +8,11 @@
     box-shadow: 0 2px 6px #c1ced7;
     background-color: rgba(255, 255, 255, 1);
     border-bottom: 1px solid rgba(0,0,0,0.125);
+    color: rgba(0, 128, 128, 1);
     h2 {
       font-size: 20px;
       font-weight: bold;
       padding: 15px;
-      color: rgba(0, 128, 128, 1);
     }
   }
 
@@ -21,7 +21,7 @@
     box-shadow: 0 2px 6px #c1ced7;
     background-color: rgba(255, 255, 255, 1);
     padding: 50px 0;
-    a {
+    p {
       color: black;
     }
   }
@@ -30,3 +30,4 @@
 .side-img {
   margin: 10px 50px 50px 50px;
 }
+

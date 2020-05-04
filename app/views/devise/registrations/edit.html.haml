@@ -17,3 +17,4 @@
         = f.file_field :avatar
       .actions
         = f.submit "更新する", class: "form__actions__btn"
+        = link_to "戻る", user_path(@user.id), class: "form__actions__btn"

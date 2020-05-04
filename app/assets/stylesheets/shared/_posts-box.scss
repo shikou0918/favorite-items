@@ -1,17 +1,18 @@
-* {
-  text-decoration: none;
-}
-
-
 .posts__list {
-  height: 1215px;
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
 
 
   &__box {
-    @include product-box;
+    height: 350px;
+    width: 300px;
+    margin: 40px 10px 0 12px;
+    // padding: 20px 0;
+    text-align: center;
+    // border-radius: 10px;
+    box-shadow: 0 2px 6px #c1ced7;
+    background-color: rgba(0, 128, 128, 0.2);
 
     &__name {
       padding: 0 25px;
@@ -53,7 +54,7 @@
   }
 }
 
-// ユーザー詳細ページ
+// ユーザー詳細ページ 消す予定 posts-box2も
 .posts__list2 {
   padding: 0 20px;
   display: flex;
