@@ -6,6 +6,7 @@
 @import "posts/index";
 @import "posts/show";
 @import "posts/side-bar";
+@import "posts/side-bar2";
 @import "shared/notifications";
 @import "shared/paginate";
 @import "shared/posts-box";
@@ -17,13 +18,20 @@
 
 
 
-img {
-  border-radius: 10px;
+// img {
+//   border-radius: 10px;
+// }
+
+* {
+  text-decoration: none;
 }
 
-// html {
-//   background-color: rgba(0, 128, 128, 0.1)
-// }
+body {
+  // background-color: rgba(0, 255, 255, 0.3)
+  // background-color: #efefef;
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
 
 
 
