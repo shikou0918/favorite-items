@@ -1,13 +1,13 @@
 .user__area {
   display: flex;
-  width: 900px;
+  width:  800px;
   margin:  0 auto;
   
   &__left {
     @include area-style;
     height: 230px;
     width: 400px;
-    margin-top: 60px;
+    margin: 60px 0 100px 0;
     padding: 20px;
     background-color: white;
 
@@ -32,12 +32,13 @@
 
   &__right {
     @include area-style;
-    margin-top: 60px;
+    margin: 60px 0 100px 0;
     height: 230px;
     padding: 20px;
+    width: 400px;
 
     &__profile {
-      width: 326px;
+      // width: 400px;
       height: 200px;
       text-align: justify;
       word-break: break-all;
@@ -128,7 +129,7 @@ h3 {
 .tab-btn-box {
   display: flex;
   justify-content: center;
-  margin: 100px auto 0;
+  margin: 50px auto 0;
 }
  
 /* タブのボタン */
