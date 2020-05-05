@@ -1,0 +1,182 @@
+@media screen and (max-width: 670px) { 
+  // 画面サイズ 670pxまで適用
+  header {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0, 128, 128, 1);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  
+    .header-left {
+      float: left;
+    
+      li {
+        line-height: 50px;
+        padding: 0 25px;
+        color: white;
+        display: block;
+        width: 200px;
+      } 
+    
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+      }
+    
+      .title {
+        font-size: 30px;
+      }
+    }
+  }
+
+  // ハンバーガーメニュー
+  .menu-icon {
+    display: block;
+    float: right;
+    line-height: 50px;
+    color: white;
+    padding: 0 25px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  // アニメーション前のメニューの状態
+  .header-right {
+    transform: translateX(-100vw);
+    transition: all .3s linear;
+  }
+  // アニメーション後のメニューの状態
+  .header-right.is-active {
+    transform: translateX(0);
+  }
+  
+
+  // メニュー本体
+  .header-right {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 128, 128, 1);
+      li {
+        line-height: 50px;
+        padding: 0 25px;
+        display: block;
+        height: 8px;
+      }
+  
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .nav_menu_li  {
+      height: auto;
+      padding: .5em 1em;
+      text-align: center;
+      color: #fff;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media screen and (min-width: 671px) and (max-width:  1000px) {
+  // 画面サイズ 671pxから1000pxまで適用
+  // ハンバーガーメニュー
+  header {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0, 128, 128, 1);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  
+    .header-left {
+      float: left;
+    
+      li {
+        line-height: 50px;
+        padding: 0 25px;
+        color: white;
+        display: block;
+        width: 200px;
+      } 
+    
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+      }
+    
+      .title {
+        font-size: 30px;
+      }
+    }
+  }
+
+  // ハンバーガーメニュー
+  .menu-icon {
+    display: block;
+    float: right;
+    line-height: 50px;
+    color: white;
+    padding: 0 25px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  // アニメーション前のメニューの状態
+  .header-right {
+    transform: translateX(-100vw);
+    transition: all .3s linear;
+  }
+  // アニメーション後のメニューの状態
+  .header-right.is-active {
+    transform: translateX(0);
+  }
+  
+
+  // メニュー本体
+  .header-right {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 128, 128, 1);
+      li {
+        line-height: 50px;
+        padding: 0 25px;
+        display: block;
+        height: 8px;
+      }
+  
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .nav_menu_li  {
+      height: auto;
+      padding: .5em 1em;
+      text-align: center;
+      color: #fff;
+      box-sizing: border-box;
+    }
+  }
+}
+
+ 
