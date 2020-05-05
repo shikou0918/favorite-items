@@ -7,38 +7,23 @@
 @import "posts/show";
 @import "posts/side-bar";
 @import "posts/side-bar2";
+@import "shared/footer";
+@import "shared/header";
 @import "shared/notifications";
 @import "shared/paginate";
 @import "shared/posts-box";
+@import "shared/responsive";
 @import "shared/search";
 @import "users/show";
 @import "form";
 @import "reset";
 @import "top";
 
-
-
-// img {
-//   border-radius: 10px;
-// }
-
 * {
   text-decoration: none;
 }
 
 body {
-  // background-color: rgba(0, 255, 255, 0.3)
-  // background-color: #efefef;
   background-color: rgba(128, 128, 128, 0.1);
+  font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
 }
-
-
-
-
-// $white: #fff;
-// $side_blue_dark: #253141;
-// $side_blue_light: #2f3e51;
-// $light_blue: #38AEF0;
-// $light_gray: #999;
-// $black: #434a54;
-// $alert_orange: #F35500;
