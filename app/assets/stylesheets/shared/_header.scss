@@ -1,0 +1,58 @@
+@media screen and (min-width: 1081px) { 
+
+  // ハンバーガーメニューのアイコンを消す
+  .menu-icon {
+    display: none;
+    float: left;
+  }
+
+  // ヘッダー 
+  header {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0, 128, 128, 1);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    .header-right {
+      display: flex;
+      float: right;
+
+      .nav_menu_li {
+        line-height: 50px;
+        padding: 0 25px;
+        display: block;
+        height: 8px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .header-left {
+      float: left;
+
+      li {
+        line-height: 50px;
+        padding: 0 25px;
+        color: white;
+        display: block;
+        width: 200px;
+      } 
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+      }
+
+      .title {
+        font-size: 30px;
+      }
+    }
+  }
+}

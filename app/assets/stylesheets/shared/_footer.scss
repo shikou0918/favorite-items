@@ -1,0 +1,20 @@
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(0, 128, 128, 1);
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+.footer-item {
+  text-align: center;
+  line-height: 50px;
+  color: white;
+}
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 10px;
+}
