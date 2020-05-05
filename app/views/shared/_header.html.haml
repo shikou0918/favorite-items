@@ -2,16 +2,27 @@
   .header-left
     %li= link_to("Favorite Items", "/", class: "title")
   - if user_signed_in?
-    .header-right
-      = render "shared/search-bar"
-      %li= link_to("投稿一覧", "/posts")
-      %li= link_to("投稿する", "/posts/new")
-      %li= link_to(current_user.nickname, user_path(current_user))
-      %li= link_to("ログアウト", destroy_user_session_path, method: :delete)
+    .fa.fa-bars.menu-icon
+    %ul.header-right
+      %li.nav_menu_li
+        = render "shared/search-bar"
+      %li.nav_menu_li
+        = link_to("投稿一覧", "/posts")
+      %li.nav_menu_li
+        = link_to("投稿する", "/posts/new")
+      %li.nav_menu_li
+        = link_to(current_user.nickname, user_path(current_user))
+      %li.nav_menu_li
+        = link_to("ログアウト", destroy_user_session_path, method: :delete)
   - else
+    %span.fa.fa-bars.menu-icon
     .header-right
-      = render "shared/search-bar"
-      %li= link_to("投稿一覧", "/posts")
-      %li= link_to("新規登録", new_user_registration_path)
-      %li= link_to("ログイン", new_user_session_path)
+      %li.nav_menu_li
+        = render "shared/search-bar"
+      %li.nav_menu_li
+        = link_to("投稿一覧", "/posts")
+      %li.nav_menu_li
+        = link_to("新規登録", new_user_registration_path)
+      %li.nav_menu_li
+        = link_to("ログイン", new_user_session_path)
   = render 'layouts/notifications'
