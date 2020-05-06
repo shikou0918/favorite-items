@@ -41,6 +41,11 @@ group :development, :test do
   gem 'faker', "~> 2.8"
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
