@@ -27,6 +27,10 @@
   box-sizing: border-box;
 }
 
+img {
+  object-fit: cover;
+}
+
 body {
   background-color: rgba(128, 128, 128, 0.1);
   font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
