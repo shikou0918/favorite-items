@@ -226,8 +226,42 @@
         padding: 0 25px;
       }
     }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
+
+  // 編集と削除のアイコン
+  .posts__edit {
+    text-align: right;
+    a {
+      color: #777;
+      font-size: 14px;
+    }
+  }
+
+  .posts__delete {
+    text-align: right;
+    a {
+      color: #777;
+    }
+  }
+
+  // いいねアイコン
+  .fa-heart {
+    color: red;
+  }
+
+  .red-text {
+    color: red;
+  }
+
+  .vertical_like {
+    text-align: right;
+  }
   // サイドバー1
   .side-bar {
     margin: 100px auto;
@@ -259,11 +293,11 @@
     }
   }
 
-  .side-img {
-    margin: 10px 50px 50px 50px;
-    width: 50%;
-    height: 100%;
-  }
+.side-img {
+  margin: 10px 50px 50px 50px;
+  width: 50%;
+  height: 100%;
+}
 
   // 投稿詳細ページ
   .post__show {
