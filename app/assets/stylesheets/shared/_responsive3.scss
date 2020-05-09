@@ -1,0 +1,664 @@
+@media screen and (min-width: 1240px) and (max-width:  1437px) {
+  // 画面サイズ 1240pxから1437pxまで適用
+
+ // ハンバーガーメニューのアイコンを消す
+ .menu-icon {
+  display: none;
+  float: left;
+}
+
+// ヘッダー 
+header {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(0, 128, 128, 1);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  .header-right {
+    display: flex;
+    float: right;
+
+    .nav_menu_li {
+      line-height: 50px;
+      padding: 0 25px;
+      display: block;
+      height: 8px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .header-left {
+    float: left;
+
+    li {
+      line-height: 50px;
+      padding: 0 25px;
+      color: white;
+      display: block;
+      width: 200px;
+    } 
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .title {
+      font-size: 30px;
+    }
+  }
+}
+
+  // 投稿一覧ページ
+  .posts {
+    display: flex;
+    width: 100%;
+
+
+    &__main {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        color: rgba(0, 128, 128, 1);
+        border-bottom: 1px solid rgba(0,0,0,0.125);
+        font-size: 30px;
+        font-weight:bold;
+      }
+
+      &__box {
+        width: 80%;
+        margin: 100px auto;
+        box-shadow: 0 2px 6px #c1ced7;
+        background-color: rgba(255, 255, 255, 1);
+        h2 {
+          margin-bottom: 30px;
+          text-align: center;
+          font-size: 40px;
+          font-weight:bold ;
+        }
+      }
+    }
+  }
+    
+  // 投稿したアイテム
+  .posts__list {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    &__box {
+      height: 350px;
+      width: 300px;
+      margin: 40px auto;
+      text-align: center;
+      box-shadow: 0 2px 6px #c1ced7;
+      background-color: rgba(0, 128, 128, 0.2);
+
+      &__name {
+        padding: 0 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font: {
+        size: 18px;
+        weight: bold;
+        }
+      }
+
+      &__content {
+        line-height: 1;
+        height: 40px;
+        margin-top: 10px;
+        padding: 0 25px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &__user {
+        margin-top: 10px;
+        padding: 0 25px;
+        font-size: 14px;
+        float: left;
+        a {
+          color: black;
+        }
+      }
+
+      &__like {
+        display: inline-block;
+        margin-top: 10px;
+        float: right;
+        padding: 0 25px;
+      }
+    }
+  }
+
+  // サイドバー1
+  .side-bar {
+    margin: 100px 20px 100px 0;
+    width: 50%;
+
+    &__title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px #c1ced7;
+      background-color: rgba(255, 255, 255, 1);
+      border-bottom: 1px solid rgba(0,0,0,0.125);
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 15px;
+        color: rgba(0, 128, 128, 1);
+      }
+    }
+
+    &__box {
+      text-align: center;
+      box-shadow: 0 2px 6px #c1ced7;
+      background-color: rgba(255, 255, 255, 1);
+      padding: 50px 0;
+      a {
+        color: black;
+      }
+    }
+  }
+
+  .side-img {
+    margin: 10px 50px 50px 50px;
+    width: 60%;
+    height: 100%;
+  }
+  
+  // 投稿詳細ページ
+  .post__show {
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    
+    &__header {
+      width: 100%;
+      background-color: white;
+      margin: 50px auto 100px;
+      border-bottom: 1px solid rgba(0,0,0,0.125);
+      box-shadow: 0 2px 6px #c1ced7;
+
+      &__name {
+        text-align: center;
+        font-size: 30px;
+        color: rgba(0, 128, 128, 1);
+      }
+    }
+
+    &__body {
+      padding-bottom: 10px;
+      border-top: 1px solid #c1ced7;
+      border-bottom: 1px solid #c1ced7;
+      background-color: rgba(255, 255, 255, 1);
+      text-align: justify;
+
+      &__img {
+        display: block;
+        margin: 20px auto;
+      }
+
+      &__avatar {
+        border-top: 1px solid #c1ced7;
+        &__img {
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+          margin: 10px 0 0 20px;
+          object-fit: cover;
+        }
+      }
+
+      &__nickname {
+        padding-left: 20px;
+        a {
+          font-weight: bold;
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+      &__date {
+        display: inline-block;
+        padding-left: 20px;
+      }
+
+      &__like {
+        display: inline-block;
+      }
+
+      &__delete {
+        float: right;
+      }
+
+      &__update {
+        float: right;
+      }
+    }
+    
+    &__text {
+      height: 250px;
+      width: 90%;
+      margin: 0 auto;
+      word-break: break-all;
+      padding:0 1em;
+      background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+      background-size: auto 2.5em;
+      line-height: 2.5em;
+      border-bottom: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      overflow: hidden;
+    }
+  }
+
+  // サイドバー2（投稿詳細ページ）
+  .side-bar2 {
+    margin: 100px auto;
+
+    &__title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px #c1ced7;
+      background-color: rgba(255, 255, 255, 1);
+      border-bottom: 1px solid rgba(0,0,0,0.125);
+      color: rgba(0, 128, 128, 1);
+      h2 {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 15px;
+      }
+    }
+
+    &__box {
+      text-align: center;
+      box-shadow: 0 2px 6px #c1ced7;
+      background-color: rgba(255, 255, 255, 1);
+      padding: 50px 0;
+      p {
+        color: black;
+      }
+    }
+  }
+
+  .side-img2 {
+    margin: 10px 50px 50px 50px;
+    width: 30%;
+    height: 100%;
+  }
+  
+  // コメント（投稿詳細ページ）
+  .comments {
+    width: 100%;
+    margin: 0 auto 120px;
+    padding-top: 30px;
+    background-color: white;
+
+    &__area {
+      display: block;
+      width: 90%;
+      height: 70px;
+      margin: 0 auto;
+      border: 1px solid #c1ced7;
+      border-radius: 10px;
+    }
+
+    &__input {
+      display: block;
+      border: none;
+      height: 40px;
+      width: 90%;
+      margin: 40px auto;
+      background: rgba(0, 128, 128, 0.7);
+      color: white;
+      box-shadow: 0 2px 6px #c1ced7;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+
+    &__list {
+      &__header {
+        padding: 20px;
+        border-top: 1px solid #c1ced7;
+      } h2 {
+        font-size: 20px;
+      }
+
+      &__show {
+        height: 350px;
+        margin: 0px auto;
+        padding: 20px;
+        overflow: scroll;
+      } 
+
+      .block {
+        color: #777;
+        height: 50px;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+
+
+        &__text {
+          display: inline-block;
+          color: #777;
+          a {
+            float: right;
+            color: #777;
+          }
+        }
+
+        &__date-delete {
+          text-align: right;
+          border-bottom: 1px solid #c1ced7;
+          .fas {
+            color: #777;
+          }
+        }
+      }
+    }
+    }
+
+  // ユーザーマイページ
+  .user__area {
+    display: flex;
+    width:  800px;
+    margin:  0 auto;
+    
+    &__left {
+      @include area-style;
+      height: 230px;
+      width: 400px;
+      margin: 60px 0 100px 0;
+      padding: 20px;
+      background-color: white;
+
+      &__avatar {
+          display: block;
+          width: 150px;
+          height: 150px;
+          margin: 0 auto;
+          border-radius: 50%;
+      }
+
+      &__nickname {
+        text-align: center;
+        h3 {
+          color: black;
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+
+    &__right {
+      @include area-style;
+      margin: 60px 0 100px 0;
+      height: 230px;
+      padding: 20px;
+      width: 400px;
+
+      &__profile {
+        height: 200px;
+        text-align: justify;
+        word-break: break-all;
+        border-bottom: 1px solid #c1ced7;
+        padding:0 1em;
+        font-size: 16px;
+        background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+        background-size: auto 2.5em;
+        line-height: 2.5em;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        overflow: hidden;
+        box-shadow: 0 2px 6px #c1ced7;
+      }
+      
+      // 編集ボタン
+      &__edit {
+        &__btn {
+          display: block;
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          background: rgba(0, 128, 128, 0.7);
+          margin: 10px auto;
+          text-align: center;
+          cursor: pointer;
+          color: white;
+          box-shadow: 0 2px 6px #c1ced7;
+        }
+      }
+    }
+  }
+
+  .following-btn {
+    float: left;
+    width: 45%;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0, 128, 128, 0.7);
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+  }
+
+  .followers-btn {
+    float: right;
+    width: 45%;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0, 128, 128, 0.7);
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 2px 6px #c1ced7;
+    cursor: pointer;
+    color: white;
+  }
+
+  // 投稿一覧といいね一覧
+  .post__like {
+  display: flex;
+  width: 300px;
+  margin: 80px auto 0;
+
+    h3 {
+      font-size: 14px;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      width: 80px;
+      margin: 10px 5px 0 0;
+      padding: 0 30px;
+      float: left;
+      box-shadow: 0 2px 6px #c1ced7;
+      color: black;
+      &:hover {
+        background-color: rgba(0, 128, 128, 0.7);
+        color: white;
+      }
+    }
+  }
+
+  .tab-btn-box {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 0;
+  }
+  
+  /* タブのボタン */
+  .tab {
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 2px 6px #c1ced7;
+    cursor: pointer;
+  }
+  
+  .tab.is-active {
+    background-color: rgba(0, 128, 128, 0.7);
+    color: #fff;
+  }
+
+  .tab-contents-box {
+    margin: 0 auto 100px;
+    width: 70%;
+  }
+  
+  /* タブの中身 */
+  .tab-contents {
+    display: none;
+  }
+  
+  /* ボタンを押した後コンテンツを表示 */
+  .tab-contents.is-show {
+    display: block;
+  }
+
+  .follow {
+    text-align: center;
+    padding-top: 100px;
+
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+      color: rgba(0, 128, 128, 1);
+    }
+  }
+
+  .follows {
+    height: 40px;
+  background: rgba(0, 128, 128, 0.7);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 6px #c1ced7;
+  }
+
+
+  // フォーム画面
+  .row {
+    padding-top: 80px;
+    text-align: center;
+    color: rgba(0, 128, 128, 1);
+    font-size: 40px;
+  }
+
+  .form {
+    max-width: 580px;
+    margin: 20px auto;
+    padding: 2rem 5rem;
+
+    &__field {
+      padding-bottom: 40px;
+      input {
+        height: 50px;
+        border-bottom: solid 2px orange;
+        background-color: rgba(128, 128, 128, 0.01);
+      }
+      textarea {
+        width: 100%;
+        min-height: 110px;
+        border-radius: 10px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        padding: 10px;
+        border: solid 2px orange;
+        background-color: rgba(128, 128, 128, 0.01);
+      }
+    }
+    
+    &__actions {
+      &__btn {
+        display: inline-block;
+        margin: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background: rgba(0, 128, 128, 0.7);
+        color: white;
+        box-shadow: 0 2px 6px #c1ced7;
+        cursor: pointer;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 0;
+    color: #57575f;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #E9EAED;
+  }
+
+  p {
+    color: white;
+  }
+
+  // 戻るボタン
+  .return{
+    height: 40px;
+    line-height: 40px;
+    background: rgba(0, 128, 128, 0.7);
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    text-align: center;
+    a {
+      color: white;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+  background: rgba(0, 128, 128, 0.7);
+    color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+    cursor: pointer;
+  }
+
+  .form-body:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .side-form {
+    text-indent:100%;
+    white-space:nowrap;
+    overflow:hidden;
+  }
+}
