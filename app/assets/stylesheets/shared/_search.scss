@@ -1,5 +1,4 @@
 .search-bar{
-  margin-right: 50px;
    &__container {
     position: relative;
     line-height: 50px;
@@ -8,13 +7,14 @@
   }
 
   .search { 
-    height: 35px;
+    height: 30px;
     padding-left: 50px;
     vertical-align: middle;
+    border-radius: 35px;
   }
 
   ::placeholder {
-    line-height: 35px;
+    line-height: 30px;
     font-size: 12px;
     margin: 0 auto;
   }
