@@ -1,5 +1,5 @@
-@media screen and (min-width: 751px) and (max-width:  1239px) {
-  // 画面サイズ 751pxから1239pxまで適用
+@media screen and (min-width: 1240px) and (max-width:  1437px) {
+  // 画面サイズ 1240pxから1437pxまで適用
 
    // トップページ
    .mainvisual {
@@ -48,7 +48,14 @@
       }
     }
   }
-  
+
+  // ハンバーガーメニューのアイコンを消す
+  .menu-icon {
+    display: none;
+    float: left;
+  }
+
+  // ヘッダー 
   header {
     height: 50px;
     width: 100%;
@@ -56,10 +63,28 @@
     position: fixed;
     top: 0;
     z-index: 10;
-  
+
+    .header-right {
+      display: flex;
+      float: right;
+
+      .nav_menu_li {
+        line-height: 50px;
+        padding: 0 25px;
+        display: block;
+        height: 8px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 12px;
+        }
+      }
+    }
+
     .header-left {
       float: left;
-    
+
       li {
         line-height: 50px;
         padding: 0 25px;
@@ -67,108 +92,52 @@
         display: block;
         width: 100%;
       } 
-    
+
       a {
         color: white;
         text-decoration: none;
         font-size: 12px;
       }
-    
+
       .title {
         font-size: 30px;
       }
     }
   }
 
-  // ハンバーガーメニュー
-  .menu-icon {
-    display: block;
-    float: right;
-    line-height: 50px;
-    color: white;
-    padding: 0 25px;
-    font-size: 30px;
-    cursor: pointer;
-  }
-  // アニメーション前のメニューの状態
-  .header-right {
-    transform: translateX(-100vw);
-    transition: all .3s linear;
-  }
-  // アニメーション後のメニューの状態
-  .header-right.is-active {
-    transform: translateX(0);
-  }
-  
-
-  // メニュー本体
-  .header-right {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 300px;
-    height: 100vh;
+  // 投稿一覧ページ
+  .posts {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 128, 128, 1);
-      li {
-        line-height: 50px;
-        padding: 0 25px;
-        display: block;
-        height: 8px;
-      }
-  
-    a {
-      color: white;
-      text-decoration: none;
-      font-size: 12px;
-    }
+    width: 100%;
 
-    .nav_menu_li  {
-      height: auto;
-      padding: .5em 1em;
-      text-align: center;
-      color: #fff;
-      box-sizing: border-box;
-    }
-  }
 
-    // 投稿一覧ページ
-    .posts {
+    &__main {
       display: flex;
+      flex-wrap: wrap;
       width: 100%;
-  
-  
-      &__main {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
+      h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        color: rgba(0, 128, 128, 1);
+        border-bottom: 1px solid rgba(0,0,0,0.125);
+        font-size: 30px;
+        font-weight:bold;
+      }
+
+      &__box {
+        width: 80%;
+        margin: 100px auto;
+        box-shadow: 0 2px 6px #c1ced7;
+        background-color: rgba(255, 255, 255, 1);
         h2 {
           margin-bottom: 30px;
           text-align: center;
-          color: rgba(0, 128, 128, 1);
-          border-bottom: 1px solid rgba(0,0,0,0.125);
-          font-size: 30px;
-          font-weight:bold;
-        }
-  
-        &__box {
-          width: 80%;
-          margin: 100px auto;
-          box-shadow: 0 2px 6px #c1ced7;
-          background-color: rgba(255, 255, 255, 1);
-          h2 {
-            margin-bottom: 30px;
-            text-align: center;
-            font-size: 40px;
-            font-weight:bold ;
-          }
+          font-size: 40px;
+          font-weight:bold ;
         }
       }
     }
+  }
     
   // 投稿したアイテム
   .posts__list {
@@ -225,7 +194,7 @@
     }
   }
 
-  // サイドバー1（投稿一覧ページ）
+  // サイドバー1
   .side-bar {
     margin: 100px 20px 100px 0;
     width: 50%;
@@ -261,7 +230,7 @@
     width: 60%;
     height: 100%;
   }
-
+  
   // 投稿詳細ページ
   .post__show {
     flex-wrap: wrap;
@@ -380,10 +349,10 @@
 
   .side-img2 {
     margin: 10px 50px 50px 50px;
-    width: 35%;
+    width: 30%;
     height: 100%;
   }
-
+  
   // コメント（投稿詳細ページ）
   .comments {
     width: 100%;
@@ -454,17 +423,19 @@
         }
       }
     }
-  }
+    }
 
   // ユーザーマイページ
   .user__area {
+    display: flex;
+    width:  800px;
     margin:  0 auto;
     
     &__left {
       @include area-style;
       height: 280px;
       width: 400px;
-      margin: 50px auto 0;
+      margin: 60px 0 100px 0;
       padding: 20px;
       background-color: white;
 
@@ -489,9 +460,8 @@
 
     &__right {
       @include area-style;
-      margin: 0 auto 100px;
+      margin: 60px 0 100px 0;
       height: 280px;
-      height: 80%;
       padding: 20px;
       width: 400px;
 
@@ -636,6 +606,7 @@
     box-shadow: 0 2px 6px #c1ced7;
   }
 
+
   // フォーム画面
   .row {
     padding-top: 80px;
@@ -646,7 +617,6 @@
 
   .form {
     max-width: 580px;
-    width: 60%;
     margin: 20px auto;
     padding: 2rem 5rem;
 

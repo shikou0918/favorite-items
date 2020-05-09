@@ -1,5 +1,5 @@
-@media screen and (min-width: 751px) and (max-width:  1239px) {
-  // 画面サイズ 751pxから1239pxまで適用
+@media screen and (min-width: 481px) and  (max-width: 750px) { 
+  // 画面サイズ 481pxまで適用から750まで対応
   header {
     height: 50px;
     width: 100%;
@@ -31,6 +31,54 @@
     }
   }
 
+   // トップページ
+   .mainvisual {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/toppage.jpg);
+    background-size: cover;
+    background-position: center;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+      background: rgba(0, 128, 128, 0.7);
+      text-shadow: 1px 2px 3px #808080;
+      color: white;
+      font-size: 4rem;
+      padding: 1rem;
+      box-shadow: 0 2px 6px #c1ced7;
+    }
+
+
+    p {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    &__login  {
+      width: 300px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      position: absolute;
+      top: 70%;
+      background: rgba(0, 128, 128, 0.8);
+      box-shadow: 0 2px 6px #c1ced7;
+          
+      a {
+        font-size: 20px;
+        text-decoration: none;
+        text-shadow: 1px 2px 3px #808080;
+        color: white;
+      }
+    }
+  }
+
   // ハンバーガーメニュー
   .menu-icon {
     display: block;
@@ -58,7 +106,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    width: 350px;
+    width: 300px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -87,40 +135,40 @@
     }
   }
 
-    // 投稿一覧ページ
-    .posts {
+  // 投稿一覧ページ
+  .posts {
+    width: 100%;
+
+
+    &__main {
       display: flex;
+      flex-wrap: wrap;
       width: 100%;
-  
-  
-      &__main {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
+      h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        color: rgba(0, 128, 128, 1);
+        border-bottom: 1px solid rgba(0,0,0,0.125);
+        font-size: 30px;
+        font-weight:bold;
+      }
+
+      &__box {
+        width: 80%;
+        // margin: 100px 0 100px 50px;
+        margin: 100px auto;
+        box-shadow: 0 2px 6px #c1ced7;
+        background-color: rgba(255, 255, 255, 1);
         h2 {
           margin-bottom: 30px;
           text-align: center;
-          color: rgba(0, 128, 128, 1);
-          border-bottom: 1px solid rgba(0,0,0,0.125);
-          font-size: 30px;
-          font-weight:bold;
-        }
-  
-        &__box {
-          width: 80%;
-          margin: 100px auto;
-          box-shadow: 0 2px 6px #c1ced7;
-          background-color: rgba(255, 255, 255, 1);
-          h2 {
-            margin-bottom: 30px;
-            text-align: center;
-            font-size: 40px;
-            font-weight:bold ;
-          }
+          font-size: 40px;
+          font-weight:bold ;
         }
       }
     }
-    
+  }
+  
   // 投稿したアイテム
   .posts__list {
     padding: 0 20px;
@@ -176,10 +224,10 @@
     }
   }
 
-  // サイドバー1（投稿一覧ページ）
+  // サイドバー1
   .side-bar {
-    margin: 100px 20px 100px 0;
-    width: 50%;
+    margin: 100px auto;
+    width: 80%;
 
     &__title {
       text-align: center;
@@ -209,7 +257,7 @@
 
   .side-img {
     margin: 10px 50px 50px 50px;
-    width: 60%;
+    width: 50%;
     height: 100%;
   }
 
@@ -331,7 +379,7 @@
 
   .side-img2 {
     margin: 10px 50px 50px 50px;
-    width: 35%;
+    width: 50%;
     height: 100%;
   }
 
@@ -413,7 +461,7 @@
     
     &__left {
       @include area-style;
-      height: 230px;
+      height: 280px;
       width: 400px;
       margin: 50px auto 0;
       padding: 20px;
@@ -441,7 +489,7 @@
     &__right {
       @include area-style;
       margin: 0 auto 100px;
-      height: 230px;
+      height: 280px;
       height: 80%;
       padding: 20px;
       width: 400px;
@@ -573,7 +621,7 @@
     padding-top: 100px;
 
     h2 {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: bold;
       color: rgba(0, 128, 128, 1);
     }
@@ -597,7 +645,7 @@
 
   .form {
     max-width: 580px;
-    width: 60%;
+    width: 50%;
     margin: 20px auto;
     padding: 2rem 5rem;
 
