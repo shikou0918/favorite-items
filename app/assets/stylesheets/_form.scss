@@ -1,111 +1,104 @@
+@media screen and (min-width: 1438px) {  
   .row {
-  padding-top: 80px;
-  text-align: center;
-  color: rgba(0, 128, 128, 1);
-  font-size: 40px;
-}
+    padding-top: 80px;
+    text-align: center;
+    color: rgba(0, 128, 128, 1);
+    font-size: 40px;
+  }
 
-.form {
-  max-width: 580px;
-  width: 95%;
-  margin: 2rem auto 20px;
-  padding: 2rem 5rem;
+  .form {
+    max-width: 580px;
+    margin: 20px auto;
+    padding: 2rem 5rem;
 
-  &__field {
-    padding-bottom: 40px;
-    input {
-      height: 50px;
-      border-bottom: solid 2px orange;
-      background-color: rgba(128, 128, 128, 0.01);
+    &__field {
+      padding-bottom: 40px;
+      input {
+        height: 50px;
+        border-bottom: solid 2px orange;
+        background-color: rgba(128, 128, 128, 0.01);
+      }
+      textarea {
+        width: 100%;
+        min-height: 110px;
+        border-radius: 10px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        padding: 10px;
+        border: solid 2px orange;
+        background-color: rgba(128, 128, 128, 0.01);
+      }
     }
-    textarea {
-      width: 100%;
-      min-height: 110px;
-      border-radius: 10px;
-      letter-spacing: 2px;
-      margin-top: 10px;
-      padding: 10px;
-      border: solid 2px orange;
-      background-color: rgba(128, 128, 128, 0.01);
+    
+    &__actions {
+      &__btn {
+        display: inline-block;
+        margin: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background: rgba(0, 128, 128, 0.7);
+        color: white;
+        box-shadow: 0 2px 6px #c1ced7;
+        cursor: pointer;
+      }
     }
   }
-  
-  &__actions {
-    &__btn {
-      display: inline-block;
-      margin: 10px 0;
-      text-align: center;
-      text-decoration: none;
-      width: 100%;
-      height: 40px;
-      line-height: 40px;
-      background: rgba(0, 128, 128, 0.7);
-      color: white;
-      box-shadow: 0 2px 6px #c1ced7;
-      cursor: pointer;
-    }
+
+  input {
+    width: 100%;
+    padding: 10px 0;
+    color: #57575f;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #E9EAED;
   }
-}
 
-
-
-input {
-  width: 100%;
-  padding: 10px 0;
-  color: #57575f;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #E9EAED;
-}
-
-p {
-  color: white;
-}
-
-
-// 戻るボタン
-.return{
-  height: 40px;
-  line-height: 40px;
-  background: rgba(0, 128, 128, 0.7);
-  border-radius: 20px;
-  cursor: pointer;
-  margin-bottom: 40px;
-  text-align: center;
-  a {
+  p {
     color: white;
   }
+
+  // 戻るボタン
+  .return{
+    height: 40px;
+    line-height: 40px;
+    background: rgba(0, 128, 128, 0.7);
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    text-align: center;
+    a {
+      color: white;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+  background: rgba(0, 128, 128, 0.7);
+    color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+    cursor: pointer;
+  }
+
+  .form-body:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .side-form {
+    text-indent:100%;
+    white-space:nowrap;
+    overflow:hidden;
+  }
 }
-
-
-.btn {
-  display: inline-block;
-  margin: 10px 0;
-  text-align: center;
-  text-decoration: none;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
- background: rgba(0, 128, 128, 0.7);
-  color: white;
-  box-shadow: 0 2px 6px #c1ced7;
-  cursor: pointer;
-}
-
-
-.form-body:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.side-form {
-  text-indent:100%;
-	white-space:nowrap;
-	overflow:hidden;
-}
-
-// フォローボタン 
-
 

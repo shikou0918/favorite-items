@@ -1,92 +1,92 @@
-.posts__list {
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 1438px) { 
+  .posts__list {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
 
 
-  &__box {
-    height: 350px;
-    width: 300px;
-    margin: 40px 10px 0 12px;
-    // padding: 20px 0;
-    text-align: center;
-    // border-radius: 10px;
-    box-shadow: 0 2px 6px #c1ced7;
-    background-color: rgba(0, 128, 128, 0.2);
+    &__box {
+      height: 350px;
+      width: 300px;
+      margin: 40px 10px 0 12px;
+      text-align: center;
+      box-shadow: 0 2px 6px #c1ced7;
+      background-color: rgba(0, 128, 128, 0.2);
 
-    &__name {
-      padding: 0 25px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font: {
-      size: 18px;
-      weight: bold;
+      &__name {
+        padding: 0 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font: {
+        size: 18px;
+        weight: bold;
+        }
+      }
+
+      &__content {
+        line-height: 1;
+        height: 40px;
+        margin-top: 10px;
+        padding: 0 25px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &__user {
+        margin-top: 10px;
+        padding: 0 25px;
+        font-size: 14px;
+        float: left;
+        a {
+          color: black;
+        }
+      }
+
+      &__like {
+        display: inline-block;
+        margin-top: 10px;
+        float: right;
+        padding: 0 25px;
       }
     }
+  }
+}
 
-    &__content {
-      line-height: 1;
-      height: 40px;
-      margin-top: 10px;
-      padding: 0 25px;
+  // ユーザー詳細ページ 消す予定 posts-box2も
+  .posts__list2 {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  // 編集と削除のアイコン
+  .posts__edit {
+    text-align: right;
+    a {
+      color: #777;
       font-size: 14px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    &__user {
-      margin-top: 10px;
-      padding: 0 25px;
-      font-size: 14px;
-      float: left;
-      a {
-        color: black;
-      }
-    }
-
-    &__like {
-      display: inline-block;
-      margin-top: 10px;
-      float: right;
-      padding: 0 25px;
     }
   }
-}
 
-// ユーザー詳細ページ 消す予定 posts-box2も
-.posts__list2 {
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-
-// 編集と削除のアイコン
-.posts__edit {
-  text-align: right;
-  a {
-    color: #777;
-    font-size: 14px;
+  .posts__delete {
+    text-align: right;
+    a {
+      color: #777;
+    }
   }
-}
 
-.posts__delete {
-  text-align: right;
-  a {
-    color: #777;
+  // いいねアイコン
+  .fa-heart {
+    color: red;
   }
-}
 
-// いいねアイコン
-.fa-heart {
-  color: red;
-}
+  .red-text {
+    color: red;
+  }
 
-.red-text {
-  color: red;
-}
-
-.vertical_like {
-  text-align: right;
-}
+  .vertical_like {
+    text-align: right;
+  }
