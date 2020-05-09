@@ -1,4 +1,7 @@
-= render "side-bar"
 .posts
-  %h2= "検索結果：#{@posts_length}件"
-  = render "shared/posts-box"
+  .posts__main
+    .posts__main__box
+      %h2= "検索結果：#{@posts_length}件"
+      = render partial: "shared/posts-box", locals: { posts: @posts}
+      = paginate(@posts)
+  = render "side-bar"

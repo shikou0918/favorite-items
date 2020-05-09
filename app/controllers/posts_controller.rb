@@ -48,7 +48,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:search])
+    @posts = Post.search(params[:search]).order('created_at DESC').page(params[:page]).per(9)
     @posts_length = @posts.length
     @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(5).pluck(:post_id))
   end
