@@ -13,6 +13,8 @@
 @import "shared/paginate";
 @import "shared/posts-box";
 @import "shared/responsive";
+@import "shared/responsive2";
+@import "shared/responsive3";
 @import "shared/search";
 @import "users/show";
 @import "form";
@@ -21,6 +23,7 @@
 
 * {
   text-decoration: none;
+  // box-sizing: border-box;
 }
 
 body {
