@@ -1,8 +1,8 @@
-.posts__list2
+.posts__list
   - posts.each do |post|
     %div{id: "box-number#{post.id}", class: "posts__list__box"}
       = link_to post_path(post.id) do
-        = image_tag(post.image.url, data: {"turbolinks" => false}, size: '300x200', class: "img")
+        = image_tag(post.image.url, data: {"turbolinks" => false}, size: '300x200', class: "img2")
       .posts__list__box__name
         = post.name
       .posts__list__box__content
