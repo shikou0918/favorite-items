@@ -1,184 +1,181 @@
-.user__area {
-  display: flex;
-  width:  800px;
-  margin:  0 auto;
-  
-  &__left {
-    @include area-style;
-    height: 230px;
-    width: 400px;
-    margin: 60px 0 100px 0;
-    padding: 20px;
-    background-color: white;
+@media screen and (min-width: 1438px) { 
+  .user__area {
+    display: flex;
+    width:  800px;
+    margin:  0 auto;
+    
+    &__left {
+      @include area-style;
+      height: 230px;
+      width: 400px;
+      margin: 60px 0 100px 0;
+      padding: 20px;
+      background-color: white;
 
-    &__avatar {
-        display: block;
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
-        border-radius: 50%;
-    }
+      &__avatar {
+          display: block;
+          width: 150px;
+          height: 150px;
+          margin: 0 auto;
+          border-radius: 50%;
+      }
 
-    &__nickname {
-      text-align: center;
-      h3 {
-        color: black;
-        font-size: 26px;
-        font-weight: bold;
+      &__nickname {
         text-align: center;
+        h3 {
+          color: black;
+          font-size: 26px;
+          font-weight: bold;
+          text-align: center;
+        }
       }
     }
-  }
 
-  &__right {
-    @include area-style;
-    margin: 60px 0 100px 0;
-    height: 230px;
-    padding: 20px;
-    width: 400px;
+    &__right {
+      @include area-style;
+      margin: 60px 0 100px 0;
+      height: 230px;
+      padding: 20px;
+      width: 400px;
 
-    &__profile {
-      // width: 400px;
-      height: 200px;
-      text-align: justify;
-      word-break: break-all;
-      border-bottom: 1px solid #c1ced7;
-      padding:0 1em;
-      background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
-      background-size: auto 2.5em;
-      line-height: 2.5em;
-      border-bottom: 1px solid #ccc;
-      border-left: 1px solid #ccc;
-      border-right: 1px solid #ccc;
-      overflow: hidden;
-      box-shadow: 0 2px 6px #c1ced7;
-    }
-    
-    // 編集ボタン
-    &__edit {
-      &__btn {
-        display: block;
-        width: 100%;
-        height: 30px;
-        line-height: 30px;
-        background: rgba(0, 128, 128, 0.7);
-        margin: 10px auto;
-        text-align: center;
-        // border-radius: 20px;
-        cursor: pointer;
-        color: white;
+      &__profile {
+        height: 200px;
+        text-align: justify;
+        word-break: break-all;
+        border-bottom: 1px solid #c1ced7;
+        padding:0 1em;
+        font-size: 16px;
+        background: linear-gradient(#ccc 1px, transparent 1px) #fffbf2;
+        background-size: auto 2.5em;
+        line-height: 2.5em;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        overflow: hidden;
         box-shadow: 0 2px 6px #c1ced7;
       }
+      
+      // 編集ボタン
+      &__edit {
+        &__btn {
+          display: block;
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          background: rgba(0, 128, 128, 0.7);
+          margin: 10px auto;
+          text-align: center;
+          cursor: pointer;
+          color: white;
+          box-shadow: 0 2px 6px #c1ced7;
+        }
+      }
     }
   }
-}
 
-.following-btn {
-  float: left;
-  width: 45%;
-  height: 30px;
-  line-height: 30px;
-  background: rgba(0, 128, 128, 0.7);
-  margin: 0 auto;
-  text-align: center;
-  // border-radius: 20px;
-  cursor: pointer;
-  color: white;
-  box-shadow: 0 2px 6px #c1ced7;
-}
+  .following-btn {
+    float: left;
+    width: 45%;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0, 128, 128, 0.7);
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+  }
 
-.followers-btn {
-  float: right;
-  width: 45%;
-  height: 30px;
-  line-height: 30px;
-  background: rgba(0, 128, 128, 0.7);
-  margin: 0 auto;
-  text-align: center;
-  // border-radius: 20px;
-  box-shadow: 0 2px 6px #c1ced7;
-  cursor: pointer;
-  color: white;
-}
-
-// 投稿一覧といいね一覧
-.post__like {
-display: flex;
-width: 300px;
-margin: 80px auto 0;
-
-h3 {
-  // @include area-style;
-  font-size: 14px;
-  text-align: center;
-  height: 40px;
-  line-height: 40px;
-  width: 80px;
-  margin: 10px 5px 0 0;
-  padding: 0 30px;
-  float: left;
-  box-shadow: 0 2px 6px #c1ced7;
-  color: black;
-  &:hover {
-    background-color: rgba(0, 128, 128, 0.7);
+  .followers-btn {
+    float: right;
+    width: 45%;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0, 128, 128, 0.7);
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 2px 6px #c1ced7;
+    cursor: pointer;
     color: white;
   }
-}
-}
 
-.tab-btn-box {
+  // 投稿一覧といいね一覧
+  .post__like {
   display: flex;
-  justify-content: center;
-  margin: 50px auto 0;
-}
- 
-/* タブのボタン */
-.tab {
-  width: 150px;
-  padding: 5px;
-  margin: 5px;
-  font-size: 14px;
-  text-align: center;
-  box-shadow: 0 2px 6px #c1ced7;
-  cursor: pointer;
-}
- 
-.tab.is-active {
-  background-color: rgba(0, 128, 128, 0.7);
-  color: #fff;
-}
+  width: 300px;
+  margin: 80px auto 0;
 
-.tab-contents-box {
-  margin: 0 auto 100px;
-  width: 70%;
-}
- 
-/* タブの中身 */
-.tab-contents {
-  display: none;
-}
- 
-/* ボタンを押した後コンテンツを表示 */
-.tab-contents.is-show {
-  display: block;
-}
+    h3 {
+      font-size: 14px;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      width: 80px;
+      margin: 10px 5px 0 0;
+      padding: 0 30px;
+      float: left;
+      box-shadow: 0 2px 6px #c1ced7;
+      color: black;
+      &:hover {
+        background-color: rgba(0, 128, 128, 0.7);
+        color: white;
+      }
+    }
+  }
 
-.follow {
-  text-align: center;
-  padding-top: 100px;
+  .tab-btn-box {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 0;
+  }
+  
+  /* タブのボタン */
+  .tab {
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 2px 6px #c1ced7;
+    cursor: pointer;
+  }
+  
+  .tab.is-active {
+    background-color: rgba(0, 128, 128, 0.7);
+    color: #fff;
+  }
 
-  h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: rgba(0, 128, 128, 1);
+  .tab-contents-box {
+    margin: 0 auto 100px;
+    width: 70%;
+  }
+  
+  /* タブの中身 */
+  .tab-contents {
+    display: none;
+  }
+  
+  /* ボタンを押した後コンテンツを表示 */
+  .tab-contents.is-show {
+    display: block;
+  }
+
+  .follow {
+    text-align: center;
+    padding-top: 100px;
+
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+      color: rgba(0, 128, 128, 1);
+    }
+  }
+
+  .follows {
+    height: 40px;
+  background: rgba(0, 128, 128, 0.7);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 6px #c1ced7;
   }
 }
-
-.follows {
-  height: 40px;
- background: rgba(0, 128, 128, 0.7);
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 2px 6px #c1ced7;
-}
-
