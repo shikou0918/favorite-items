@@ -228,6 +228,10 @@
     }
   }
 
+  .img2 {
+    width: 100%;
+  }
+
   // サイドバー1
   .side-bar {
     margin: 100px auto;
@@ -294,6 +298,7 @@
 
       &__img {
         display: block;
+        width: 85%;
         margin: 20px auto;
       }
 
