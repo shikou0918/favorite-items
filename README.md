@@ -25,7 +25,7 @@ https://www.favorite-items.net/
 
 - Haml
 - Sass
-- JQuery 
+- jQuery 
 
 ##### バックエンド
 
