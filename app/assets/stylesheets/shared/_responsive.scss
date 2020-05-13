@@ -157,7 +157,6 @@
 
       &__box {
         width: 80%;
-        // margin: 100px 0 100px 50px;
         margin: 100px auto;
         box-shadow: 0 2px 6px #c1ced7;
         background-color: rgba(255, 255, 255, 1);
@@ -179,6 +178,7 @@
 
 
     &__box {
+      width: 100%;
       margin: 40px auto;
       text-align: center;
       box-shadow: 0 2px 6px #c1ced7;
