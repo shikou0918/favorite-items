@@ -2,6 +2,6 @@ FactoryBot.define do
   factory :comment do
     user
     post
-    text {"テスト"}
+    text { "テスト" }
   end
 end
