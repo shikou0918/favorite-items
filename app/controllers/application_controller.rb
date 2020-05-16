@@ -29,9 +29,8 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
-    #アカウント編集後のリダイレクト先
-  def after_update_path_for(resource)
+  # アカウント編集後のリダイレクト先
+  def after_update_path_for(_resource)
     users_path(@user)
-    
   end
 end
