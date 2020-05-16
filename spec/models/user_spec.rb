@@ -6,7 +6,7 @@ describe User do
       user = build(:user)
       expect(user).to be_valid
     end
-   
+
     it "名前がないと登録できない" do
       user = build(:user, nickname: "")
       user.valid?
@@ -18,7 +18,6 @@ describe User do
       user.valid?
       expect(user.errors[:nickname]).to include("is too long (maximum is 10 characters)")
     end
-
 
     it "メールアドレスがない場合は登録できない" do
       user = build(:user, email: "")
@@ -34,9 +33,9 @@ describe User do
     end
 
     it "パスワードがない場合は登録できない" do
-    user = build(:user, password: nil)
-    user.valid?
-    expect(user.errors[:password]).to include("can't be blank")
+      user = build(:user, password: nil)
+      user.valid?
+      expect(user.errors[:password]).to include("can't be blank")
     end
 
     it "パスワードが6文字以内だと登録できない" do
