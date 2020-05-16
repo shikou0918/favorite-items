@@ -3,9 +3,9 @@ require 'rails_helper'
 describe PostsController, type: :controller do
   describe 'GET #index' do
     it "@postに正しい値が入ってること" do
-      posts = create_list(:post, 3) 
+      posts = create_list(:post, 3)
       get :index
-      expect(assigns(:posts)).to match(posts.sort{ |a, b| b.created_at <=> a.created_at } )
+      expect(assigns(:posts)).to match(posts.sort { |a, b| b.created_at <=> a.created_at })
     end
 
     it "index.html.hamlに遷移すること" do
@@ -32,9 +32,8 @@ describe PostsController, type: :controller do
       post = create(:post)
       get :edit, params: { id: post }
       expect(response).to render_template :edit
-    end 
+    end
   end
-
 
   describe 'GET #show' do
     it "@postに正しい値が入っていること" do
@@ -47,15 +46,15 @@ describe PostsController, type: :controller do
       post = create(:post)
       get :show, params: { id: post }
       expect(response).to render_template :show
-    end 
+    end
   end
 
   describe 'Delete #destroy' do
     it "アイテムの削除" do
       post = create(:post)
-      expect{
+      expect do
         delete :destroy, params: { id: post }, xhr: true
-      }.to change(Post,:count).by(-1)
+      end.to change(Post, :count).by(-1)
     end
 
     it "destroy.js.hamlに遷移すること" do
@@ -65,7 +64,3 @@ describe PostsController, type: :controller do
     end
   end
 end
-
-
-
-
