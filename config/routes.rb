@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
   root "home#top"
-  
-  resources :likes, only: [:create, :destroy]
+
+  resources :likes, only: %i[create destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :posts do
-     collection do
+    collection do
       get 'search'
-     end
+    end
     resources :comments
     resources :likes, only: %i[create destroy]
   end
-  
-  
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   devise_scope :user do
@@ -23,5 +21,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :relationships, only: [:create, :destroy]
+  resources :relationships, only: %i[create destroy]
 end
