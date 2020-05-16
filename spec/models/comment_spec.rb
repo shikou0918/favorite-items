@@ -27,4 +27,3 @@ describe Comment do
     end
   end
 end
-
