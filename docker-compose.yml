@@ -5,7 +5,7 @@ services:
     # MySQLのイメージを指定
     image: mysql:5.6
     environment:
-　    # PasswordとUsernameはdatabase.ymlと合せる
+    # PasswordとUsernameはdatabase.ymlと合せる
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: root
     ports:
@@ -17,7 +17,7 @@ services:
     command: rails s -p 3000 -b '0.0.0.0'
     # ローカルのディレクトリをマウント
     volumes:
-      - .:/app_name
+      - .:/favorite-items
     ports:
       - "3000:3000"
     # appコンテナとdbコンテナを連携

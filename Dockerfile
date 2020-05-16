@@ -8,9 +8,9 @@ RUN apt-get update -qq && \
                        nodejs           
 
 # 作業ディレクトリの作成
-RUN mkdir /app_name 
+RUN mkdir /favorite-items
 # Dockerfileをもとに生成したDockerコンテナ内で使える環境変数を指定
-ENV APP_ROOT /app_name
+ENV APP_ROOT /favorite-items
 WORKDIR $APP_ROOT
 
 # ホストからGemfileをコンテナ上にコピー
