@@ -12,7 +12,6 @@ describe UsersController, type: :controller do
       user = create(:user)
       get :show, params: { id: user }
       expect(response).to render_template :show
-    end 
+    end
   end
 end
-
