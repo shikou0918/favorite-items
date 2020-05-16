@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to posts_path, notice: "編集しました。"
-    else 
+    else
       flash.now[:alert] = "編集に失敗しました。"
       render :edit
     end
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
     @user = User.find_by(id: @post.user_id)
     @posts = @user.posts.page(params[:page]).order('created_at DESC').limit(5)
     @comments = @post.comments.includes(:user)
-    @comment = Comment.new 
+    @comment = Comment.new
   end
 
   def edit
