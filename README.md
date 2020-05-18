@@ -46,7 +46,7 @@ jQueryにて、ハンバーガーメニューの実装と投稿削除、コメ�
 
 ##### インフラ・開発環境等
 
-- AWS（VPC, EC2, S3, Route53, ALB, ACM）
+- AWS（VPC, EC2, S3, Route53, ALB, ACM, RDS）
 
 - Capistrano
 
@@ -54,7 +54,7 @@ jQueryにて、ハンバーガーメニューの実装と投稿削除、コメ�
 
 
 ##### AWS構成図
-![AWS構成図](https://user-images.githubusercontent.com/57096841/81496540-4cb72280-92f3-11ea-83d9-752b1d7124fa.png)
+![AWS構成図](https://user-images.githubusercontent.com/57096841/82207167-5f110c00-9944-11ea-88e5-a9585a1069c8.png)
 
 
 # 実装機能
@@ -79,4 +79,3 @@ jQueryにて、ハンバーガーメニューの実装と投稿削除、コメ�
 # 今後実装予定の内容
 
 - 複数画像投稿機能
-- Dockerの導入
