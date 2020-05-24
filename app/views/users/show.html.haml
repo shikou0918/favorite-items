@@ -7,9 +7,10 @@
 .tab-contents-box
   .tab-contents.js-tab-contents.is-show
     = render partial: "shared/posts-box2", locals: { posts: @posts}
+    = paginate(@posts)
   .tab-contents.js-tab-contents
     = render partial: "shared/posts-box2", locals: { posts: @liked_posts}
-  = paginate(@posts)
+    = paginate(@liked_posts)
 
 :javascript
   $(function(){
@@ -22,4 +23,3 @@
       $('.tab-contents').eq(index).addClass('is-show');
     });
   });
-
