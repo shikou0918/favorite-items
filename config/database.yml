@@ -52,8 +52,8 @@ production:
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  # password:
+  # socket: /tmp/mysql.sock
   database: favorite-items_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
