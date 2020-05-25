@@ -16,7 +16,6 @@ default: &default
   username: root
   password: 
   socket: /tmp/mysql.sock
-  # host: db
 
 development:
   <<: *default
@@ -50,12 +49,6 @@ test:
 #
 production:
   <<: *default
-  # adapter: mysql2
-  # encoding: utf8
-  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  # username: root
-  # password:
-  # socket: /tmp/mysql.sock
   database: favorite-items_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
