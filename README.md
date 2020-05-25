@@ -2,7 +2,8 @@
 
 就職活動用のポートフォリオとして制作した自作アプリです。
 自分のお気に入りのアイテムを紹介する投稿アプリです。
-![favorite-items](https://user-images.githubusercontent.com/57096841/81496897-eda6dd00-92f5-11ea-99db-1a8ac421470e.jpg)
+![AWS構成図](https://user-images.githubusercontent.com/57096841/82812101-33a29a00-9ecd-11ea-941d-c20768cc0fbe.png)
+
 
 
 # URL
