@@ -13,11 +13,15 @@
 
     &__field {
       padding-bottom: 40px;
+      h2 {
+        text-align: center;
+      }
       input {
         height: 50px;
         border-bottom: solid 2px orange;
         background-color: rgba(128, 128, 128, 0.01);
       }
+
       textarea {
         width: 100%;
         min-height: 110px;
@@ -99,6 +103,18 @@
     text-indent:100%;
     white-space:nowrap;
     overflow:hidden;
+  }
+
+  #preview_img {
+    display: none;
+  }
+
+  // プレビュー表示
+  #img1 {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 10px;
+    cursor: pointer;
   }
 }
 
