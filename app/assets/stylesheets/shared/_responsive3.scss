@@ -689,6 +689,9 @@
 
     &__field {
       padding-bottom: 40px;
+      h2 {
+        text-align: center;
+      }
       input {
         height: 50px;
         border-bottom: solid 2px orange;
@@ -775,5 +778,17 @@
     text-indent:100%;
     white-space:nowrap;
     overflow:hidden;
+  }
+
+  #preview_img {
+    display: none;
+  }
+
+  // プレビュー表示
+  #img1 {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 10px;
+    cursor: pointer;
   }
 }
